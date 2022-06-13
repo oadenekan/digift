@@ -17,7 +17,6 @@ const data = {
 const CustomCard = () => {
   return (
     <React.Fragment>
-      <div className="card-parent">
         <Card>
           <Card.Body>
             <div className="gift-card-wrapper">
@@ -41,55 +40,6 @@ const CustomCard = () => {
             </div>
           </Card.Body>
         </Card>
-        <Card>
-          <Card.Body>
-            <div className="gift-card-wrapper">
-              <img src={giftcard} alt="tag" />
-            </div>
-            <Card.Title>
-              <img src={amazon} alt="gift card Icon" />
-              <strong>{data.name}</strong>
-            </Card.Title>
-            <div className="card-text">
-              <p className="home-text__desc">{data.text}</p>
-            </div>
-            <div className="card-text footer-wrapper">
-              <span>
-                <img src={infoIcon} />
-              </span>
-              <p className="home-text__desc">{data.footer}</p>
-            </div>
-            <div className="button-div">
-              <Card.Link href="#"> Purchase card ></Card.Link>            
-            </div>
-          </Card.Body>
-        </Card>
-        </div>
-      {/*<div className="card-parent">
-        <Card>
-          <Card.Body>
-            <div className="gift-card-wrapper">
-              <img src={giftcard} alt="tag" />
-            </div>
-            <Card.Title>
-              <img src={amazon} alt="gift card Icon" />
-              <strong>{data.name}</strong>
-            </Card.Title>
-            <div className="card-text">
-              <p className="home-text__desc">{data.text}</p>
-            </div>
-            <div className="card-text footer-wrapper">
-              <span>
-                <img src={infoIcon} />
-              </span>
-              <p className="home-text__desc">{data.footer}</p>
-            </div>
-            <div className="button-div">
-              <Card.Link href="#"> Purchase card ></Card.Link>            
-            </div>
-          </Card.Body>
-        </Card>
-      </div>*/}
     </React.Fragment>
   );
 };

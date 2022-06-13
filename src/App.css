@@ -1,7 +1,7 @@
 .App {
   margin: 0 auto;
-  width: 100%;
-  max-width: 1200px;
+  width: 90%;
+
 }
 
 .App-header {
@@ -89,6 +89,10 @@ nav-item {
   background-color: #f5f7fa;
   padding: 0 15px;
   border-radius: 12px;
+  min-width: 250px;
+  max-height: 662px;
+  
+  /*flex: 0 1 25%;*/
 }
 
 .filter-reset {
@@ -112,6 +116,7 @@ label {
 .card-col {
   display: flex;
   gap: 10px;
+  flex: 0 1 100%;
 }
 
 .card {
@@ -119,17 +124,23 @@ label {
 }
 
 .card-parent {
-  display: flex;
-  flex-direction: column;
+  display: inline-flex;
+  /*flex-direction: column;*/
   justify-content: center;
   align-items: center;
   margin-top: 1em;
   background-color: #f5f7fa;
   border-radius: 12px;
+  flex-wrap: wrap;
+}
+
+.inner-card {
+  display: flex;
+  /*flex-direction: column;  */
 }
 
 .card-body {
-  flex: 0 1 100%;
+  /*flex: 0 1 25%;*/
   justify-content: space-between;
   border: 2px solid #ebeff5;
   border-radius: 8px;

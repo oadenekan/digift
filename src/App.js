@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import logo from "./images/digift-logo.svg";
 import icon from "./images/search-icon.svg";
 import daynight from "./images/day-night.svg";
@@ -9,24 +9,10 @@ import CButton from "./shared/Button";
 import giftcard from "./images/giftcard.svg";
 import CustomCard from "./shared/CCard";
 import arrow from "./images/arrow.svg";
+import Sidebar from "./shared/sidebar";
 
 function App() {
-  const [msg, setMsg] = useState(false);
-  const [showResults, setShowResults] = useState(false);
-
-  const moreCard = () => {
-    console.log(showResults);
-    setShowResults(wasOpened => !wasOpened);
-    console.log(showResults);
-    // <CustomCard />
-  };
-
-  // useEffect(() => {
-  //   const moreCard = () => {
-  //     setShowResults(true);
-  //   };
-  // }, []);
-
+  const [count, setCount] = useState(6);
   return (
     <React.Fragment>
       <div className="App">
@@ -77,59 +63,30 @@ function App() {
           <h1>Latest Arrivals</h1>
         </section>
         <section className="card-col">
-          <div className="filter-box">
-            <div className="filter-reset">
-              <strong className="reset-filter-content">Filters</strong>
-              <strong className="reset reset-filter-content">Reset</strong>
-            </div>
-            <div>
-              <strong>Categories</strong>
-            </div>
-            <div>
-              <input type="checkbox" /><label for="ecommerce">Ecommerce</label>
-             </div> 
-            <div>
-              <input type="checkbox" /><label for="ecommerce">Popular</label>
-            </div>
-            <div>
-              <input type="checkbox" /><label for="ecommerce">Airtime & Electricity</label>
-            </div>
-            <div>
-              <input type="checkbox" /><label for="ecommerce">Gaming</label>
-            </div>
-            <div>
-              <input type="checkbox" /><label for="ecommerce">Electronics</label>
-            </div>
-            <div>
-              <input type="checkbox" /><label for="ecommerce">Clothes & Fashion</label>
-            </div>
-            <div>
-              <input type="checkbox" /><label for="ecommerce">Jewelry & Watches</label>
-            </div>
-            <div>
-              <input type="checkbox" /><label for="ecommerce">Home and furnitures</label>
-            </div>
-            <div>
-              <input type="checkbox" /><label for="ecommerce">Sports & Entertainment</label>
-            </div>
+        <Sidebar/>
+          <div className="card-parent">
+            {[...Array(count)].map((elementInArray, index) => (
+                <div key={index} className="inner-card">
+                  <CustomCard />
+                </div>
+            ))}
+
           </div>
-          <CustomCard />
+
+          {/*<CustomCard />
           <CustomCard />
           <CustomCard />
           {showResults && (
              <CustomCard />
-          )}
+          )}*/}
         </section>
-          <button className="load-more-btn">
-            Load more products
-            <img
-              src={arrow}
-              alt="arrow direction"
-              onClick={() => {
-                    setShowResults(!false);;
-              }}
-            />
-          </button>
+        <button className="load-more-btn" onClick={() => setCount(count + 3)}>
+          Load more products
+          <img
+            src={arrow}
+            alt="arrow direction"
+          />
+        </button>
       </div>
     </React.Fragment>
   );
