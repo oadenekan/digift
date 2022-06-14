@@ -1,7 +1,6 @@
 .App {
+  width: 100%;
   margin: 0 auto;
-  width: 90%;
-
 }
 
 .App-header {
@@ -81,7 +80,7 @@ nav-item {
   width: 100%;
 }
 
-.filter-box  {
+.filter-box {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -91,8 +90,6 @@ nav-item {
   border-radius: 12px;
   min-width: 250px;
   max-height: 662px;
-  
-  /*flex: 0 1 25%;*/
 }
 
 .filter-reset {
@@ -101,15 +98,15 @@ nav-item {
 }
 
 .reset {
-  color: #0069E0;
+  color: #0069e0;
 }
 
 .reset-filter-content:hover {
-  border-bottom: 2px solid #0069E0;
+  border-bottom: 2px solid #0069e0;
 }
 
 label {
-  color: #8A91A8;
+  color: #8a91a8;
   padding-left: 10px;
 }
 
@@ -125,22 +122,21 @@ label {
 
 .card-parent {
   display: inline-flex;
-  /*flex-direction: column;*/
   justify-content: center;
   align-items: center;
   margin-top: 1em;
   background-color: #f5f7fa;
   border-radius: 12px;
   flex-wrap: wrap;
+  padding: 5px;
 }
 
 .inner-card {
   display: flex;
-  /*flex-direction: column;  */
+  /*padding: 5px;*/
 }
 
 .card-body {
-  /*flex: 0 1 25%;*/
   justify-content: space-between;
   border: 2px solid #ebeff5;
   border-radius: 8px;
@@ -184,8 +180,8 @@ label {
 }
 
 .load-more-btn {
-  color: #8A91A8;
-  background-color: #FFFFFF;
+  color: #8a91a8;
+  background-color: #ffffff;
   margin: 30px auto;
   display: flex;
   height: 40px;
@@ -195,8 +191,55 @@ label {
 }
 
 .load-more-btn:hover {
-  color: #8A91A8;
+  color: #8a91a8;
   background-color: #f5f7fa;
+}
+
+.testimonial {
+  line-height: 24px;
+  height: 70%;
+}
+
+.avatar-name-role {
+  display: flex;
+}
+
+.role-name-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+}
+
+.role-name-wrapper > :nth-child(1) {
+  font-weight: bold;
+  margin-top: 0;
+  color: #000000;
+}
+.role-name-wrapper > :nth-child(2) {
+  margin-top: 0;
+}
+
+.testimonial-header {
+  display: inline-flex;
+  justify-content: center;
+  font-size: 56px;
+  font-weight: 700;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 25px;
+}
+
+.testimonial-card .card {
+  height: 359px;
+}
+
+.latest-arrival {
+  margin-top: 6em;
 }
 
 @media (max-width: 780px) {
@@ -216,5 +259,10 @@ label {
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .card-col {
+    display: flex;
+    flex-direction: column;
   }
 }

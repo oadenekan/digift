@@ -4,20 +4,20 @@ import "../App.css";
 const Category = ({ label, value }) => {
   const [inputValue, setInputValue] = useState("ecommerce");
 
-  const eatEba = e => {
+  const checkBoxValue = e => {
     setInputValue(e.target.value);
-    console.log(inputValue);
-    console.log(value, 'val');
   };
   return (
     <React.Fragment>
+      <div>
       <input
         type="checkbox"
-        onChange={eatEba}
+        onChange={checkBoxValue}
         value={value}
         checked={inputValue === value}
       />
-      <label for={value}>{label}</label>
+      <label htmlFor={value}>{label}</label>
+      </div>
     </React.Fragment>
   );
 };
