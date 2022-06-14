@@ -1,54 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import "../App.css";
+import Category from "./category";
 
 const Sidebar = () => {
-  return (      
+  const [category, setCategory] = useState('ecommerce');
+
+  return (
     <React.Fragment>
-          <div className="filter-box col-md-4">
-            <div className="filter-reset">
-              <strong className="reset-filter-content">Filters</strong>
-              <strong className="reset reset-filter-content">Reset</strong>
-            </div>
-            <div>
-              <strong>Categories</strong>
-            </div>
-            <div>
-              <input type="checkbox" />
-              <label for="ecommerce">Ecommerce</label>
-            </div>
-            <div>
-              <input type="checkbox" />
-              <label for="ecommerce">Popular</label>
-            </div>
-            <div>
-              <input type="checkbox" />
-              <label for="ecommerce">Airtime & Electricity</label>
-            </div>
-            <div>
-              <input type="checkbox" />
-              <label for="ecommerce">Gaming</label>
-            </div>
-            <div>
-              <input type="checkbox" />
-              <label for="ecommerce">Electronics</label>
-            </div>
-            <div>
-              <input type="checkbox" />
-              <label for="ecommerce">Clothes & Fashion</label>
-            </div>
-            <div>
-              <input type="checkbox" />
-              <label for="ecommerce">Jewelry & Watches</label>
-            </div>
-            <div>
-              <input type="checkbox" />
-              <label for="ecommerce">Home and furnitures</label>
-            </div>
-            <div>
-              <input type="checkbox" />
-              <label for="ecommerce">Sports & Entertainment</label>
-            </div>
-          </div>
+      <div className="filter-box col-md-4">
+        <div className="filter-reset">
+          <strong className="reset-filter-content">Filters</strong>
+          <strong className="reset reset-filter-content">Reset</strong>
+        </div>
+        <div>
+          <strong>Categories</strong>
+        </div>
+        <Category label="Ecommerce" value="ecommerce" />
+        <Category label="Popular" value="popular" />
+        <Category
+          label="Airtime &amp; Electricity"
+          value="airtime-electricity"
+        />
+        <Category label="Gaming" value="gaming" />
+        <Category label="Electronics" value="electronics" />
+        <Category
+          label="Clothes &amp; Fashion"
+          value="fashion"
+        />
+        <Category
+          label="Jewelry &amp; Watches"
+          value="jewelry"
+        />
+        <Category
+          label="Home and furnitures"
+          value="home"
+        />
+        <Category
+          label="Sports &amp; Entertainment"
+          value="entertainment"
+        />
+      </div>
     </React.Fragment>
   );
 };

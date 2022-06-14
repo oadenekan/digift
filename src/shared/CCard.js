@@ -7,7 +7,7 @@ import infoIcon from "../images/info-icon.svg";
 import "../App.css";
 
 const data = {
-  tags: "Giftcard",
+  category: 'ecommerce',
   name: "Amazon Gift Card",
   text:
     "Amazon Gift Card is a global fashion destination for 20-somethings, selling all the freshest styles complemented by exclusive content....",
