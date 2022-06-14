@@ -33,7 +33,6 @@ const Testimony = () => {
               text={items.text}
               name={items.name}
               role={items.role}
-              key={key}
             />
           </div>
         );

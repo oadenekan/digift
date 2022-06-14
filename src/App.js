@@ -9,47 +9,17 @@ import CustomCard from "./shared/CCard";
 import arrow from "./images/arrow.svg";
 import Sidebar from "./shared/sidebar";
 import Testimony from "./shared/testimony";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import banner2 from "./images/banner-2.svg";
+import Business from "./Business";
+import Menu from "./menu";
 
 function App() {
   const [count, setCount] = useState(6);
   return (
     <React.Fragment>
-     <div className="container">
-        <header className="App-header">
-          <nav>
-            <ul>
-              <li className="nav-item">
-                <img src={logo} alt="logo" />
-              </li>
-              <li className="nav-item">Personal > Business ></li>
-              <li className="nav-item search-wrapper">
-                <span>
-                  <img src={icon} alt="search icon" />
-                </span>
-                <input
-                  type="text"
-                  placeholder="Find cards anywhere"
-                  className="search-input"
-                />
-              </li>
-              <li className="nav-item">
-                <img
-                  src={daynight}
-                  alt="day night icon"
-                  className="day-night"
-                />
-              </li>
-              <li className="nav-item">Login</li>
-              <li className="nav-item">
-                <button>
-                  Get started <img src={sparkles} alt="get started icon" />
-                </button>
-              </li>
-            </ul>
-          </nav>
-        </header>
+      <div className="container">
+        <Menu />
         <section className="main-content">
           <img src={banner} alt="banner" />
         </section>

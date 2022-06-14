@@ -10,13 +10,13 @@ const Category = ({ label, value }) => {
   return (
     <React.Fragment>
       <div>
-      <input
-        type="checkbox"
-        onChange={checkBoxValue}
-        value={value}
-        checked={inputValue === value}
-      />
-      <label htmlFor={value}>{label}</label>
+        <input
+          type="checkbox"
+          onChange={checkBoxValue}
+          value={value}
+          checked={inputValue === value}
+        />
+        <label htmlFor={value}>{label}</label>
       </div>
     </React.Fragment>
   );
